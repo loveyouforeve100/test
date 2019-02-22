@@ -1,0 +1,23 @@
+git 多个远程仓库使用： https://my.oschina.net/looly/blog/311573
+
+1. git clone git@abc.git.com:root/test1.git 本地仓库
+
+2. GitHub 仓库:  git@github.com:loveyouforeve100/test.git
+
+建立github仓库分支
+
+git remote add staging git@github.com:loveyouforeve100/test.git
+
+git checkout -b staging staging/master
+
+3. 从github分支拉代码
+
+git fetch staging
+
+4. 提交到github分支
+
+git push staging staging:master
+
+5. 合并其他分支 然后推送到github
+
+此情况适合管理员管理本地代码，然后提交代码到生产环境
